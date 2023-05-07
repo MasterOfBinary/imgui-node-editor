@@ -9,3 +9,8 @@ bin
 *.user
 *.ini
 *.json
+
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+*.cmake
