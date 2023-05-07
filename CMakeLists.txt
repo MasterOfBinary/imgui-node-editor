@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.25)
 
-project(imgui-node-editor)
+project(node_editor)
 
 set(SOURCE_FILES
     crude_json.cpp
@@ -18,5 +18,6 @@ set(SOURCE_FILES
     imgui_node_editor_internal.inl
 )
 
-add_library(imgui_node_editor STATIC ${SOURCE_FILES})
-target_include_directories(imgui_node_editor PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+add_library(node_editor STATIC ${SOURCE_FILES})
+target_include_directories(node_editor PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(node_editor PRIVATE imgui::imgui)
